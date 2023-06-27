@@ -117,7 +117,6 @@ export default function Index(){
             trigger: `#TechnologiesGrid${tech.name}`,
             start: "top center", // start the animation when the top of the box hits the center of the viewport
             end: 'bottom center',
-            markers: true,
             scrub: true, // smooth animation
   
           }
