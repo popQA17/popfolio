@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
               icon: FaBootstrap
             },
             {
-              name: "Mongo DB",
+              name: "MongoDB",
               icon: SiMongodb
             },
             {
@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
               icon: SiTailwindcss
             },
             {
-              name: "Next.JS",
+              name: "NextJS",
               icon: SiNextdotjs
             },
             {
@@ -87,14 +87,44 @@ export default function RootLayout({ children }) {
               icon: SiGithub
             },
             {
-              name: "Node.js",
+              name: "NodeJS",
               icon: SiNodedotjs
             },
             {
               name: "PYPI",
               icon: SiPypi
             },
-          ]
+          ],
+          projects: [
+          {
+              name: "Auriel",
+              image: "https://auriel.tk/AurielBanner.png",
+              description: "The Simple and Powerful Polls & Giveaways bot",
+              link: 'https://auriel.tk',
+              role: "Creator"
+          },
+          {
+              name: "FaithClient",
+              image: "https://faithclient.tk/bg.png",
+              description: "Beautiful. Aesthetic. Intuitive.",
+              link: 'https://faithclient.tk',
+              role: "Web Dev"
+          },
+          {
+              name: "NightDusk",
+              image: "https://nightdusk.tk/NightDuskBanner.png",
+              description: "Support sites made simple",
+              link: 'https://nightdusk.tk',
+              role: "Creator"
+          },
+          {
+              name: "OneLink",
+              image: "https://link.pop-plays.live/OneLink.png",
+              description: "Seamless Connection between Devices",
+              link: 'https://link.pop-plays.live',
+              role: "Creator"
+          }
+        ]
         }}>
           {children}
         </MainContext.Provider>
