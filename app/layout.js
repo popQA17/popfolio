@@ -5,7 +5,7 @@ import './globals.css'
 import { Caveat, Poppins } from 'next/font/google'
 import { FaBootstrap } from 'react-icons/fa'
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript, IoLogoPython, IoLogoReact } from 'react-icons/io5'
-import { SiChakraui, SiFigma, SiFlask, SiFramer, SiGit, SiGithub, SiMongodb, SiNextdotjs, SiNodedotjs, SiNpm, SiPypi, SiTailwindcss } from "react-icons/si";
+import { SiCanva, SiChakraui, SiFigma, SiFlask, SiFramer, SiGit, SiGithub, SiHashnode, SiMongodb, SiNextdotjs, SiNodedotjs, SiNpm, SiPypi, SiSwift, SiTailwindcss, SiVisualstudiocode, SiWindowsterminal } from "react-icons/si";
 
 const caveat = Caveat({ subsets: ['latin'], weight: '700' })
 const poppins = Poppins({ subsets: ['latin'], weight: "300" })
@@ -28,76 +28,119 @@ export default function RootLayout({ children }) {
           tech: [
             {
               name: "CSS",
-              icon: IoLogoCss3
+              icon: IoLogoCss3,
+              link: "https://www.w3.org/Style/CSS/Overview.en.html",
             },
             {
               name: "HTML",
-              icon: IoLogoHtml5
+              icon: IoLogoHtml5,
+              link: "https://www.w3.org/html/",
             },
             {
               name: "Javascript",
-              icon: IoLogoJavascript
+              icon: IoLogoJavascript,
+              link: "https://v8.dev/",
             },
             {
               name: "React",
-              icon: IoLogoReact
+              icon: IoLogoReact,
+              link: "https://react.dev/",
             },
             {
               name: "Python",
-              icon: IoLogoPython
+              icon: IoLogoPython,
+              link: 'https://python.org'
             },
             {
               name: "Bootstrap",
-              icon: FaBootstrap
+              icon: FaBootstrap,
+              link: "https://getbootstrap.com"
             },
             {
               name: "MongoDB",
-              icon: SiMongodb
+              icon: SiMongodb,
+              link: "https://mongodb.com"
             },
             {
               name: "Flask",
-              icon: SiFlask
+              icon: SiFlask,
+              link: "https://flask.palletsprojects.com/en/2.3.x/"
             },
             {
               name: "Tailwind",
-              icon: SiTailwindcss
+              icon: SiTailwindcss,
+              link: "https://tailwindcss.com"
             },
             {
               name: "NextJS",
-              icon: SiNextdotjs
+              icon: SiNextdotjs,
+              link: 'https://nextjs.org'
             },
             {
               name: "Chakra-UI",
-              icon: SiChakraui
+              icon: SiChakraui,
+              link: 'https://chakra-ui.com',
             },
             {
               name: "Figma",
-              icon: SiFigma
+              icon: SiFigma,
+              link: 'https://figma.com'
             },
             {
               name: "Framer-Motion",
-              icon: SiFramer
+              icon: SiFramer,
+              link: 'https://www.framer.com/motion/'
             },
             {
               name: "NPM",
-              icon: SiNpm
+              icon: SiNpm,
+              link: 'https://npmjs.org'
             },
             {
               name: "Git",
-              icon: SiGit
+              icon: SiGit,
+              link: 'https://git-scm.com'
             },
             {
               name: "Github",
-              icon: SiGithub
+              icon: SiGithub,
+              link: 'https://github.com'
             },
             {
               name: "NodeJS",
-              icon: SiNodedotjs
+              icon: SiNodedotjs,
+              link: 'https://nodejs.org'
             },
             {
               name: "PYPI",
-              icon: SiPypi
+              icon: SiPypi,
+              link: 'https://pypi.org'
             },
+            {
+              name: "Swift",
+              icon: SiSwift,
+              link: 'https://developer.apple.com/swift/'
+            },
+            {
+              name: "Canva",
+              icon: SiCanva,
+              link: 'https://canva.com'
+            },
+            {
+              name: "Hashnode",
+              icon: SiHashnode,
+              link: 'https://hashnode.com',
+            },
+            {
+              name: "VisualStudioCode",
+              icon: SiVisualstudiocode,
+              link: 'https://https://code.visualstudio.com/'
+            },
+            {
+              name: 'Raycast',
+              icon: SiWindowsterminal,
+              link: "https://raycast.com"
+            }
           ],
           projects: [
           {
@@ -127,7 +170,7 @@ export default function RootLayout({ children }) {
               description: "Seamless Connection between Devices",
               link: 'https://link.pop-plays.live',
               role: "Creator"
-          }
+          },
         ]
         }}>
           {children}
