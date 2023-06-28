@@ -219,7 +219,7 @@ export default function Index(){
           <h2 className="text-xl font-bold mb-4">Discord</h2>
           <p className="text-sm text-center">Ask me questions, project requests, or just have a chat.</p>
         </a>
-        <div class="divider divider-horizontal">OR</div>
+        <div class="divider divider-vertical lg:divider-horizontal">OR</div>
         <button onClick={()=> window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')} class="hover:bg-white/10 hover:scale-105 transition-all flex flex-col items-center justify-center p-4 rounded-lg bg-white/5 h-[150px] w-[250px]">
           <h2 className="text-xl font-bold mb-4">Telepathy</h2>
           <p className="text-sm text-center">To get to me super quickly!! :P</p>

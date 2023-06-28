@@ -16,6 +16,10 @@ export const MainContext = createContext({})
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Pop Plays - Portfolio</title>
+        <link rel={'icon'} href={avatarUrl}/>
+      </head>
       <body>
         <MainContext.Provider value={{
           caveat,
@@ -105,7 +109,7 @@ export default function RootLayout({ children }) {
           },
           {
               name: "FaithClient",
-              image: "https://faithclient.tk/bg.png",
+              image: "https://beta.faithclient.tk/background.png",
               description: "Beautiful. Aesthetic. Intuitive.",
               link: 'https://faithclient.tk',
               role: "Web Dev"
