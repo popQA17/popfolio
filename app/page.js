@@ -4,7 +4,7 @@ import { useContext, useEffect, useLayoutEffect, useRef, useState } from "react"
 import { MainContext } from "./layout";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { FaChevronRight, FaDiscord, FaGithub, FaPython, FaReact, FaRss, FaSwift } from 'react-icons/fa'
+import { FaArrowLeft, FaChevronRight, FaDiscord, FaGithub, FaPython, FaReact, FaRss, FaSwift } from 'react-icons/fa'
 import $ from 'jquery'
 import {motion } from 'framer-motion'
 export default function Index(){
@@ -51,6 +51,12 @@ export default function Index(){
       description: "Discover my contributions and repositories. Find this website on Github",
       icon: FaGithub,
       link: 'https://github.com/popqa17'
+    },
+    {
+      name: "Go back",
+      description: "Revert to an older version of this website",
+      icon: FaArrowLeft,
+      link: 'https://old.pop-plays.live'
     }
   ]
   function jumpToSection(section){
