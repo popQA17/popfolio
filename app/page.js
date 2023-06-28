@@ -178,7 +178,7 @@ export default function Index(){
         <p id={'profileName'} className={`opacity-0 translate-y-[10px] text-5xl mt-3 ${ctx.caveat.className}`}>Pop Plays</p>
         <p className="absolute bottom-[10px] text-white/50 text-sm animate-pulse">Scroll Down</p>
     </div>
-    <div id={'TechnologiesSection'} className="flex flex-col relative items-center justify-center h-screen w-screen px-4">
+    <div id={'TechnologiesSection'} className="flex flex-col relative items-center justify-center min-h-screen w-screen px-4">
         <h1 className="text-3xl text-white/70 font-bold mb-4">My <span id={'TechnologiesFavorites'}>Favorite</span> Technologies:</h1>
         <div className="flex flex-col">
         <h1 id={'TechnologiesReact'} className="text-3xl text-white/50 font-bold my-2 flex"><FaReact/> React</h1>
