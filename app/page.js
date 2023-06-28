@@ -19,14 +19,14 @@ export default function Index(){
       gsap.to('#profileImage', {
         opacity: 1,
         scale: 1,
-        duration: 2,
-        scrollTrigger: {
-          trigger: "#ProfileIntroductory",
-          start: "top top", // start the animation when the top of the box hits the center of the viewport
-          end: 'bottom 80%',
-          id: 'profileImage',
-          scrub: true, // smooth animation
-        }
+        duration: 0.5,
+        // scrollTrigger: {
+        //   trigger: "#ProfileIntroductory",
+        //   start: "top top", // start the animation when the top of the box hits the center of the viewport
+        //   end: 'bottom 80%',
+        //   id: 'profileImage',
+        //   scrub: true, // smooth animation
+        // }
       });
       gsap.to("#profileName", {
         opacity: 1,
@@ -108,7 +108,7 @@ export default function Index(){
           trigger: '#ProjectsSection',
           start: "top top", // start the animation when the top of the box hits the center of the viewport
           end: 'bottom 90%',
-          markers: true,
+          markers: false,
           scrub: true, // smooth animation
         }
       });
@@ -134,12 +134,10 @@ export default function Index(){
             pin: true,
             scrub: 0.1,
             //snap: directionalSnap(1 / (sections.length - 1)),
-            markers: true,
+            markers: false,
             end: ()=> `+=${document.getElementById('ProjectScroller').scrollWidth -  document.getElementById("ProjectScroller").offsetWidth}`
           }
         })
-        console.log(document.getElementById('ProjectScroller').scrollWidth + document.getElementById('ProjectScroller').clientWidth)
-        console.log(document.getElementById('ProjectScroller').clientWidth)
       }, 1000)
       window.scrollTo(0, 0);
     }, app);
@@ -147,10 +145,7 @@ export default function Index(){
   }, []);
   useEffect(()=>{
     let ectx = gsap.context(() => {
-    console.log(count)
-    console.log(ctx.tech.length)
     if (count >= ctx.tech.length){
-      console.log('yo we made it')
       ctx.tech.map((tech)=>{
         gsap.to(`#TechnologiesGrid${tech.name}`, {
           opacity: 1,
@@ -217,11 +212,30 @@ export default function Index(){
       </div>
       <div className="flex-1"/>
     </div>
-    <div className="h-[200vh]"/>
+    <div id={'ContactSection'} className="flex flex-col relative items-center justify-center h-[100vh] w-screen overflow-hidden px-4">
+      <h1 className="text-3xl text-white font-bold mb-4">Contact Me</h1>
+      <div class="flex items-center flex-col justify-center lg:flex-row">
+        <a href={'https://discord.com/users/729975591406796840'} target="_blank" class="hover:bg-white/10 hover:scale-105 transition-all flex flex-col items-center justify-center p-4 rounded-lg bg-white/5 h-[150px] w-[250px]">
+          <h2 className="text-xl font-bold mb-4">Discord</h2>
+          <p className="text-sm text-center">Ask me questions, project requests, or just have a chat.</p>
+        </a>
+        <div class="divider divider-horizontal">OR</div>
+        <button onClick={()=> window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')} class="hover:bg-white/10 hover:scale-105 transition-all flex flex-col items-center justify-center p-4 rounded-lg bg-white/5 h-[150px] w-[250px]">
+          <h2 className="text-xl font-bold mb-4">Telepathy</h2>
+          <p className="text-sm text-center">To get to me super quickly!! :P</p>
+        </button>
+      </div>
+    </div>
+    <div className="h-[50px] flex items-center border-t border-white/10 px-4">
+      <p className="text-white/70">© All Rights Reserved, 2023</p>
+      <div className="flex-1"/>
+      <p className="text-white/70">Made by <span className="text-primary">Pop Plays</span> ✨</p>      
+    </div>
   </div>
   {!loaded && 
   <div className="fixed top-0 left-0 bg-black h-screen w-screen flex flex-col items-center justify-center">
-    <h1>Loading</h1>
+    <h1 className="text-xl animate-pulse">Loading some <span className="text-primary">Juicy Animations</span>..</h1>
+    <p className="text-sm text-white/50">Tip: Keep scrolling when it loads!</p>
   </div>}
   </>
 }
